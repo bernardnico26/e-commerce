@@ -57,3 +57,37 @@
     color: black;
     z-index: 100;
 }
+.card{
+    height: 100%;
+}
+.productsHomebuttons{
+    display: flex;
+    justify-content: space-around;
+}
+
+.productData{
+    min-height: 80vh;
+}
+.userData h2{
+    width: 100%;
+    background-color: #849eb8;
+    color: white;
+    display: flex;
+    padding: 5px;
+    text-align: center;
+    align-items: center;
+    margin-bottom: 0;
+}
+.userData p{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    margin-bottom: 0;
+    
+}
+hr{
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50%;
+}

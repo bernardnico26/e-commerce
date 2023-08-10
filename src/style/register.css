@@ -1,4 +1,4 @@
-.form-section{
+.form-register-section{
     height: 100vh;
     padding: 3rem 0;
     display: flex;
@@ -21,12 +21,14 @@ form div{
     display: flex;
     flex-direction: column;
 }
-.buttonLogin{
+.buttonSignIn{
     display: flex;
     align-items: center;
+    margin-top: 20px;
     width: 100%;
 }
-.buttonLogin button{
+.buttonSignIn button{
+    
     border-style: none;
     color: white;
     background-color: #325d88;
@@ -35,11 +37,11 @@ form div{
 form h1 {
     text-align: center;
 }
-.registerSectionInLogin{
+.loginSectionInregister{
     display: flex;
     gap: 5px;
 }
-.registerbutton-Login{
+.loginbutton-signin{
     background-color: #ffffff00;
     border-style: none;
     display: flex;

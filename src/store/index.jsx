@@ -1,11 +1,18 @@
 import { configureStore } from '@reduxjs/toolkit'
-import tokenSlice from './slice/tokenSlice'
-import isLoading from './slice/isLoading'
-import articles from './slice/articles'
+import tokenSlice from './slices/tokenSlice'
+import isLoading from './slices/isLoading'
+import articles from './slices/articles'
+import cartList from './slices/cartList'
+import purchases from './slices/purchasesSlide'
+import wishlistReducer from './slices/wishlist';
+
 export default configureStore({
   reducer: {
     tokenSlice,
     isLoading,
-    articles
+    articles,
+    cartList,
+    purchases,
+    wishlist: wishlistReducer,
 	}
 })
