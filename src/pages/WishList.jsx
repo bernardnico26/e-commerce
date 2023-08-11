@@ -1,6 +1,8 @@
 import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { setAddWishlistThunk, setRemoveWishlistThunk } from '../store/slices/wishlist';
+import Button from "react-bootstrap/Button";
+import { setAddCardThunk } from "../store/slices/cartList"
 
 const WishList = () => {
   const dispatch = useDispatch();
@@ -17,6 +19,15 @@ const WishList = () => {
       dispatch(setAddWishlistThunk(item));
     });
   }, [dispatch, userId]);
+
+  const addCart =(productId)=>{
+    const data = {
+      quantity: 1,
+      productId
+    }
+    dispatch( setAddCardThunk( data ) )
+
+}
 
     return (
         <div>
@@ -50,6 +61,15 @@ const WishList = () => {
                                 gap:"10px",
                                 width:"100%"}}
                                 className='wishListCard'>
+                                    <div>
+                                    <Button
+                                    onClick={() => addCart(item.id)}
+                                    
+                                    className="buthover"
+                                    >
+                                        <i className="bx bxs-cart-alt bx-sm"></i>
+                                    </Button>
+                                    </div>
                                     <h3>{item.title}</h3>
                                     <p>{item.price}</p>
                                     <div className="backgroundDeleteButton">
