@@ -8,6 +8,7 @@ const Login=()=>{
     const navigate = useNavigate()
     const dispatch = useDispatch()
     const {register,handleSubmit} = useForm()
+    
     const loginUser =(data)=>{
         dispatch( setPostLogin(data)) 
         navigate("/")

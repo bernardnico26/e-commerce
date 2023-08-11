@@ -4,7 +4,7 @@ import isLoading from './slices/isLoading'
 import articles from './slices/articles'
 import cartList from './slices/cartList'
 import purchases from './slices/purchasesSlide'
-import wishlistReducer from './slices/wishlist';
+import wishlist from './slices/wishlist';
 
 export default configureStore({
   reducer: {
@@ -13,6 +13,6 @@ export default configureStore({
     articles,
     cartList,
     purchases,
-    wishlist: wishlistReducer,
+    wishlist
 	}
 })

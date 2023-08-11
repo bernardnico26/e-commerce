@@ -10,8 +10,6 @@ import axios from 'axios';
 import ListGroup from 'react-bootstrap/ListGroup';
 import Button from "react-bootstrap/Button";
 
-
-
 const Home = () => {
 
     const articles = useSelector(state=>state.articles)

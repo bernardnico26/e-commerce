@@ -1,13 +1,14 @@
 import { Navigate, Outlet } from "react-router-dom";
 
 const ProtectedRouter =()=>{
-    if (localStorage.length>0) {
-        return (
-        <>
-            <Outlet/>
-        </>)
-    }else{
-        return (<Navigate to="/login"/>)
-    }
+    const token = localStorage.getItem("userToken")
+        if(token){
+            return (
+            <>
+                <Outlet/>
+            </>)
+        }else{
+            return (<Navigate to="/login"/>)
+        }
 }
 export default ProtectedRouter;

@@ -45,8 +45,7 @@ const removeFromWishlist = (productId) => {
           <Route element={<ProtectedRouter/>}>
             <Route path='/purchases' element={<Purchases/>}/>
             <Route path='/my-dates' element={<UserData/>}/>
-            <Route path='/wishlist' element={<WishList addToWishlist={addToWishlist} removeFromWishlist={removeFromWishlist} />} />
-
+            <Route path='/wishlist' element={<WishList addToWishlist={addToWishlist} removeFromWishlist={removeFromWishlist} />}/>
           </Route>
         </Routes>
       </Container>

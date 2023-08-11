@@ -8,7 +8,8 @@ export const tokenSlice = createSlice({
     initialState: false,
     reducers: {
         setChangeValor: (state, actions)=>{
-            if(localStorage.length>0){
+            const token = localStorage.getItem("userToken")
+            if(token){
                 return true
             }else{
                 return false
