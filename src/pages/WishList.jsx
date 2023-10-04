@@ -52,7 +52,7 @@ const WishList = () => {
                             maxHeight:"210px"}}>
                                 <div
                                 className='wishListImgSection'>
-                                    <img src={item.images?.[0].url} alt="Product" />
+                                    <img src={item.images?.[2].url} alt="Product" />
                                 </div>
                                 <div
                                 style={{display:"flex",
