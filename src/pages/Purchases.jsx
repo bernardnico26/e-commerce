@@ -32,7 +32,7 @@ const Purchases = () => {
                   maxHeight:"210px"}}>
             <div
             className='purchaseImgSection'>
-              <img src={article.product.images?.[0].url}/>
+              <img src={article.product.images?.[2].url}/>
             </div>
             
             <div

@@ -63,7 +63,7 @@ return (
                                             alignItems:"center"}}
                                     className='imgCartSection'>
                                         <img
-                                        src={listProduct.product.images?.[0].url}
+                                        src={listProduct.product.images?.[2].url}
                                         alt="article_img"
                                         style={{height:"180px",
                                                 width:"100%",

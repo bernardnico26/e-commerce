@@ -27,10 +27,10 @@ const ArticleDetails = () => {
 
     const getDetails = () => {
         axios
-            .get(`https://e-commerce-api-v2.academlo.tech/api/v1/products/${id}`)
+            .get(`https://e-commerce-q5et.onrender.com/products/${id}`)
             .then((resp) => {
                 setArticlesDetail(resp.data)
-                dispatch(filterArticlesByCategoryThunk(resp.data.category.id))
+                dispatch(filterArticlesByCategoryThunk(resp.data.category?.id))
                 
             })
             .catch((error) => console.error(error))
@@ -190,7 +190,7 @@ const ArticleDetails = () => {
                                             <div style={{width:"100%",maxHeight:"210px"}}>
                                                 <Card.Img
                                                 variant="top"
-                                                src={article.images?.[0].url}
+                                                src={article.images?.[0]?.url}
                                                 style={{ height:"100%",objectFit:"contain"}}
                                                 className="imgSuggerences"
                                                 />

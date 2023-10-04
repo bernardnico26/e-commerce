@@ -20,14 +20,14 @@ export const tokenSlice = createSlice({
 })
 export const setPostLogin = (data) => (dispatch)=>{
             axios
-                .post("https://e-commerce-api-v2.academlo.tech/api/v1/users/login", data)
+                .post("https://e-commerce-q5et.onrender.com/users/login", data)
                 .then(resp=>{saveLocalStora(resp.data), dispatch(setChangeValor())})
                 .catch(error=>console.error(error))
         }
 
 export const setPostRegister =(data)=> (dispatch)=>{
             axios
-                .post("https://e-commerce-api-v2.academlo.tech/api/v1/users", data)
+                .post("https://e-commerce-q5et.onrender.com/users", data)
                 .then()
                 .catch(error=> console.error(error))
         }

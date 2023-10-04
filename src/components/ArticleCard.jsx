@@ -46,7 +46,7 @@ function ArticleCard({ data }) {
       <div style={{ width: "100%", maxHeight: "210px" }}>
         <Card.Img
           variant="top"
-          src={data.images?.[0].url}
+          src={data.images?.[0]?.url}
           style={{ height: "100%", objectFit: "contain" }}
         />
       </div>

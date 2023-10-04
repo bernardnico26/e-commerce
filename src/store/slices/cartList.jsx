@@ -15,7 +15,7 @@ export const cartList = createSlice({
 
 export const setAddCardThunk =(data)=> dispatch => {
     axios
-        .post("https://e-commerce-api-v2.academlo.tech/api/v1/cart", data, getConfig())
+        .post("https://e-commerce-q5et.onrender.com/cart", data, getConfig())
         .then(()=>dispatch( getListProductThunk()))
         .catch(error=>console.error(error))
         .finally(() => dispatch(setIsLoading(false)))
@@ -23,14 +23,14 @@ export const setAddCardThunk =(data)=> dispatch => {
 }
 export const getListProductThunk = () => dispatch =>{
     axios
-        .get("https://e-commerce-api-v2.academlo.tech/api/v1/cart", getConfig())
+        .get("https://e-commerce-q5et.onrender.com/cart", getConfig())
         .then(resp=> dispatch( setCartList(resp.data) ) )
         .catch(error => console.error(error))
         .finally(() => dispatch(setIsLoading(false)))
 }
 export const deleteProductThunk = (id) => (dispatch)=>{
     axios
-        .delete(`https://e-commerce-api-v2.academlo.tech/api/v1/cart/${id}`, getConfig())
+        .delete(`https://e-commerce-q5et.onrender.com/cart/${id}`, getConfig())
         .then(()=>dispatch( getListProductThunk()))
         .catch(err => console.error(err))
 }
@@ -42,7 +42,7 @@ export const modifyQuantityProduct = (id, data) => dispatch =>{
     }
 
     axios
-        .put(`https://e-commerce-api-v2.academlo.tech/api/v1/cart/${id}`, body, getConfig())
+        .put(`https://e-commerce-q5et.onrender.com/cart/${id}`, body, getConfig())
         .then(()=>dispatch( getListProductThunk()))
         .catch(error => console.error(error))
         .finally(() => dispatch(setIsLoading(false)))

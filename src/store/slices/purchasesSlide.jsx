@@ -18,7 +18,7 @@ export const postPurchase  = () => dispatch =>{
     dispatch (setIsLoading(true))
 
     axios
-    .post(`https://e-commerce-api-v2.academlo.tech/api/v1/purchases`,{}, getConfig())
+    .post(`https://e-commerce-q5et.onrender.com/purchases`,{}, getConfig())
     .then(()=>dispatch( getListProductThunk()))
     .catch(error => console.error(error))
     .finally(() => dispatch(setIsLoading(false)))
@@ -28,7 +28,7 @@ export const getPurchase = () => dispatch =>{
     dispatch(setIsLoading(true))
 
     axios
-        .get("https://e-commerce-api-v2.academlo.tech/api/v1/purchases", getConfig())
+        .get("https://e-commerce-q5et.onrender.com/purchases", getConfig())
         .then(resp=> dispatch( setPurchases(resp.data)))
         .catch(err => console.error(err))
         .finally(() => dispatch(setIsLoading(false)))
